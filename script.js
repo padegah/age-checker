@@ -25,6 +25,11 @@ function ageChecker() {
 function yearChecker() {
     let yearDate = new Date(bdate.value);
 
+    if(!bday) {
+        age.innerText = `Please select Date of Birth.`;
+        return;
+    }
+    
     if(yearDate < bday) {
         age.innerText = `You were not born by then`;
         // console.log();
